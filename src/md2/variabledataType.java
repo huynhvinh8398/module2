@@ -1,4 +1,6 @@
 package md2;
+
+
 public class variabledataType {
     public static void main(String[] args) {
         int i = 10; // khai báo biến i là kiểu int có giá trị là 10
@@ -12,5 +14,6 @@ public class variabledataType {
         System.out.println("d ="+d);
         System.out.println("b ="+b);
         System.out.println("s = " +s);
+        
 }
 }
