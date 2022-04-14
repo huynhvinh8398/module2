@@ -11,5 +11,6 @@ public class currency {
         usd = sc.nextDouble();
         double quydoi = usd*23000;
         System.out.print("Giá trị VND:" +quydoi);
+        int $for = 1;
     }
 }
