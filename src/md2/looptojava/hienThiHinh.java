@@ -55,6 +55,6 @@ public class hienThiHinh {
             System.out.println();
         }
     /* vẽ hình tam giác cân */
-        
+
     }
 }
