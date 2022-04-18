@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class removeElement {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int[] arr = new int[20];
+        int[] arr = new int[10];
         arr[0] = 6;
         arr[1] = 4;
         arr[2] = 7;

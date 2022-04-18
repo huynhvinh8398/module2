@@ -28,5 +28,6 @@ public class numberOfStudentWhoPassed {
                 count++;
         }
         System.out.print("\n The number of students passing the exam is " +  count);
+
     }
 }
