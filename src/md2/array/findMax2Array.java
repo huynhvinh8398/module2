@@ -6,11 +6,11 @@ public class findMax2Array {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter row and column: ");
+        System.out.print("Nhập vào hàng và cột: ");
         int x = scanner.nextInt();
         int y = scanner.nextInt();
         int arr [][] =new int[x][y];
-        System.out.print("Enter two number random: ");
+        System.out.print("Nhập vào số ngẫu nhiên: ");
         int rd1 = scanner.nextInt();
         int rd2 = scanner.nextInt();
         for (int i = 0; i < arr.length; i++) {
