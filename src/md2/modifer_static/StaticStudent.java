@@ -6,19 +6,17 @@ public class StaticStudent {
     private static String college = "BBDIT";     //biến static
     // contructor
 
-    StaticStudent(int r, String n) {
+   StaticStudent(int r, String n) {
         rollno = r;
         name = n;
     }
-
     // tạo static method
-    static void change() {
+    static void change(){
         college = "CODEGYM";
     }
-
     // phương thức display
-    void display() {
-        System.out.println(rollno + " " + name + " " + college);
+    void display(){
+        System.out.println(rollno+ " "+name +" "+ college);
     }
 
 }
