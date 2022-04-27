@@ -1,6 +1,5 @@
-package md2.Point2D_3D;
+package md2.Inheritance.Point2D_3D;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Point3D extends Point2D {
@@ -19,10 +18,10 @@ public class Point3D extends Point2D {
     public void setZ(float z) {
         this.z = z;
     }
-   public void setXYZ() {
-//       this.x=x;
-//        this.y =y;
-////        this.z = z;
+   public void setXYZ(float x, float y,float z) {
+       this.x=x;
+        this.y =y;
+       this.z = z;
    }
     public float[] getXYZ() {
         return new float[]{getX(),getY(),z};

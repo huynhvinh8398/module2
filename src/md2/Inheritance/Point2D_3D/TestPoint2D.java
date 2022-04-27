@@ -1,4 +1,4 @@
-package md2.Point2D_3D;
+package md2.Inheritance.Point2D_3D;
 
 public class TestPoint2D {
     public static void main(String[] args) {

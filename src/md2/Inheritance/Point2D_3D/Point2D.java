@@ -1,6 +1,5 @@
-package md2.Point2D_3D;
+package md2.Inheritance.Point2D_3D;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Point2D {
