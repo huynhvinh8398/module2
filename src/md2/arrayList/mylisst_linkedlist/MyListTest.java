@@ -1,4 +1,4 @@
-package md2.arrayList.mylisst;
+package md2.arrayList.mylisst_linkedlist;
 
 public class MyListTest {
     public static void main(String[] args) {

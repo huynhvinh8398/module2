@@ -1,4 +1,4 @@
-package md2.arrayList.linkedlist;
+package md2.arrayList.linkedlistthuchanh;
 
 public class TestMyLinkedList {
     public static void main(String[] args) {

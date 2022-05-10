@@ -1,22 +1,24 @@
-package md2.arrayList.mylisst;
+package md2.arrayList.mylisst_linkedlist;
 
 public class Mylist<E> {
     private int size = 0;
-    private static final int DEFAULT_CAPACITY =10;
-    private Object elements [];
+    private static final int DEFAULT_CAPACITY = 10;
+    private Object elements[];
 
     public Mylist() {
         elements = new Object[DEFAULT_CAPACITY];
     }
-    public Mylist (int capacity) {
+
+    public Mylist(int capacity) {
         elements = new Object[capacity];
     }
+
     public boolean add(E element) {
         if (size == elements.length) {
-            return false ;
+            return false;
         }
         elements[size++] = element; //  elements[size] = element , sau do size+=1 ;
-        return true ;
+        return true;
     }
 
     public void add(int index, E element) {
@@ -25,10 +27,11 @@ public class Mylist<E> {
         elements[index] = element;
         size++;
     }
+
     private void checkIndex(int index) {
         if (index < 0 || index >= size)
             throw new IndexOutOfBoundsException
-                    ("index " + index + " out of bounds") ;
+                    ("index " + index + " out of bounds");
     }
 
     public E remove(int index) {
@@ -41,6 +44,7 @@ public class Mylist<E> {
         size--;
         return temp;
     }
+
     public int size() {
         return this.size;
     }
@@ -60,14 +64,17 @@ public class Mylist<E> {
                 return true;
         return false;
     }
+
     public int indexOf(E e) {
         for (int i = 0; i < size; i++)
-            if (e.equals(elements[i])) return i;
+            if (e.equals(elements[i]))
+                return i;
         return -1;
     }
 
     public int lastIndexOf(E e) {
-        for (int i = size - 1; i >= 0; i--) if (e.equals(elements[i])) return i;
+        for (int i = size - 1; i >= 0; i--) if (e.equals(elements[i]))
+            return i;
         return -1;
     }
 
@@ -76,20 +83,22 @@ public class Mylist<E> {
         elements = (E[]) new Object[DEFAULT_CAPACITY];
         size = 0;
     }
-    public E get(int index){
-        if (index >= size|| index < 0){
+
+    public E get(int index) {
+        if (index >= size || index < 0) {
             throw new IndexOutOfBoundsException("Index : " + index + ",size : " + index);
         }
-        return (E) elements[index] ; // vi moi element la  1 object
+        return (E) elements[index]; // vi moi element la  1 object
     }
 
-    public void printMyList(){
-        int i = 0 ;
-        for( E e : (E[]) elements){
-            System.out.println( "Element " + i +" : " + e);
+    public void printMyList() {
+        int i = 0;
+        for (E e : (E[]) elements) {
+            System.out.println("Element " + i + " : " + e);
             i++;
         }
     }
 
+    }
 
-}
+
