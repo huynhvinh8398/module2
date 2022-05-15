@@ -7,12 +7,11 @@ public class MyListTest {
         listNames.add("b");
         listNames.add("c");
         listNames.add("d");
+        listNames.lastIndexOf("d");
         listNames.add(3, "e");
         //  listNames.clear();
         listNames.printMyList();
-        listNames.remove(3);
         listNames.printMyList();
-
 
         Mylist<Number> listNumber = new Mylist<>(10);
         listNumber.add(1,1);
@@ -20,6 +19,7 @@ public class MyListTest {
         listNumber.add(3,3);
         listNumber.add(4,4);
         listNumber.add(5,5);
+
         listNumber.printMyList();
         if (listNumber.contains(3)) {
             System.out.println("Yes!");

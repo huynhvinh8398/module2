@@ -1,31 +1,45 @@
 package md2.arrayList.mylisst_linkedlist;
 
-public class Mylist<E> {
-    private int size = 0;
-    private static final int DEFAULT_CAPACITY = 10;
-    private Object elements[];
+import java.util.Arrays;
 
+public class Mylist<E> {
+    private int size;
+    private static final int DEFAULT_CAPACITY=10;
+    private Object elements[];
+     //phương thức khởi tạo 2 lớp
     public Mylist() {
         elements = new Object[DEFAULT_CAPACITY];
     }
-
     public Mylist(int capacity) {
-        elements = new Object[capacity];
+        elements  = new Object[capacity];
     }
-
+    // phương thức kiểm tra add
     public boolean add(E element) {
         if (size == elements.length) {
-            return false;
+            return false ;
         }
         elements[size++] = element; //  elements[size] = element , sau do size+=1 ;
-        return true;
+        return true ;
     }
-
+    //phương thức add
     public void add(int index, E element) {
+        checkIndex(index);
+        if(size == elements.length){
+            ensureCapacity();
+        }
+//        if(size != elements.length){
+//            System.arraycopy(elements, index, elements, index+1, size-index);
+//        }
+//        elements[index] = element;
+//        size++;
         for (int i = size; i > index; i--)
             elements[i] = elements[i - 1];
         elements[index] = element;
         size++;
+    }
+    public void ensureCapacity() {
+        int newSize = elements.length*2;
+        elements = Arrays.copyOf(elements, newSize);
     }
 
     private void checkIndex(int index) {
@@ -49,32 +63,37 @@ public class Mylist<E> {
         return this.size;
     }
 
-    @Override
-    public Mylist clone() {
-        Mylist<E> clone = new Mylist<E>(elements.length);
-        for (E e : (E[]) elements) {
-            clone.add(e);
-        }
-        return clone;
-    }
-
+//    @Override
+//    public Mylist clone() {
+//        Mylist<E> clone = new Mylist<E>(elements.length);
+//        for (E e : (E[]) elements) {
+//            clone.add(e);
+//        }
+//        return clone;
+//    }
+   //phương thức tìm kiếm chuỗi kí tự có trả true k có trả về false
     public boolean contains(E e) {
-        for (int i = 0; i < size; i++)
-            if (e.equals(elements[i]))
+        for (int i = 0; i < size; i++) {
+            if (e.equals(elements[i])) {
                 return true;
+            }
+        }
         return false;
     }
-
+    //phương thức trả về vị trí nếu k có trả về -1
     public int indexOf(E e) {
         for (int i = 0; i < size; i++)
             if (e.equals(elements[i]))
                 return i;
         return -1;
     }
-
+//phương thức trả về chỉ số cuối của kí tự k tìm thấy trả về -1
     public int lastIndexOf(E e) {
-        for (int i = size - 1; i >= 0; i--) if (e.equals(elements[i]))
-            return i;
+        for (int i = size - 1; i >= 0; i--) {
+            if (e.equals(elements[i])) {
+                return i;
+            }
+        }
         return -1;
     }
 
